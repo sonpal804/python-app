@@ -13,9 +13,10 @@ try:
    password="Sonpal@12345", 
    host="mysql-server-test.mysql.database.azure.com", 
    port=3306, 
-   database="test", 
+   database="test" 
    #ssl_ca="DigiCertGlobalRootCA.crt.pem", 
-   ssl_disabled=False)
+   #ssl_disabled=False
+   )
    
    print("Connection established")
 except mysql.connector.Error as err:
