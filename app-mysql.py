@@ -6,17 +6,14 @@ from mysql.connector import errorcode
 
 print('app is started...')
 
-config = mysql.connector.connect(
-  host ="mysqldb-server.mysql.database.azure.com",
-  user ="sonpal",
-  passwd ="Sonpal@12345",
-  database = "mysql"
-)
-
 # Construct connection string
 
-try:
-   conn = mysql.connector.connect(**config)
+try:   
+   conn = mysql.connector.connect(user='sonpal',
+                                   password='Sonpal@12345',
+                                   database='test',
+                                   host='mysqldb-server.mysql.database.azure.com',
+                                   ssl_ca='/var/www/html/DigiCertGlobalRootCA.crt.pem')
    print("Connection established")
 except mysql.connector.Error as err:
   if err.errno == errorcode.ER_ACCESS_DENIED_ERROR:
