@@ -14,7 +14,7 @@ try:
    host="mysql-server-test.mysql.database.azure.com", 
    port=3306, 
    database="test", 
-   ssl_ca="DigiCertGlobalRootCA.crt.pem", 
+   #ssl_ca="DigiCertGlobalRootCA.crt.pem", 
    ssl_disabled=False)
    
    print("Connection established")
