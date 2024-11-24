@@ -9,10 +9,11 @@ print('app is started...')
 # Construct connection string
 
 try:   
-   conn = mysql.connector.connect(user="sonpal", 
+   conn = mysql.connector.connect(    
+   host="mysql-server-test.mysql.database.azure.com",
+   user="sonpal", 
    password="Sonpal@12345", 
-   host="mysql-server-test.mysql.database.azure.com", 
-   port=3306, 
+   #port=3306, 
    database="test" 
    #ssl_ca="DigiCertGlobalRootCA.crt.pem", 
    #ssl_disabled=False
