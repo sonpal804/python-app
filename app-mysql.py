@@ -9,11 +9,14 @@ print('app is started...')
 # Construct connection string
 
 try:   
-   conn = mysql.connector.connect(user='sonpal',
-                                   password='Sonpal@12345',
-                                   database='test',
-                                   host='mysqldb-server.mysql.database.azure.com',
-                                   ssl_ca='/var/www/html/DigiCertGlobalRootCA.crt.pem')
+   conn = mysql.connector.connect(user="sonpal", 
+   password="Sonpal@12345", 
+   host="mysql-server-test.mysql.database.azure.com", 
+   port=3306, 
+   database="test", 
+   ssl_ca="DigiCertGlobalRootCA.crt.pem", 
+   ssl_disabled=False)
+   
    print("Connection established")
 except mysql.connector.Error as err:
   if err.errno == errorcode.ER_ACCESS_DENIED_ERROR:
